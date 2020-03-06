@@ -1,0 +1,59 @@
+.root {
+	-fx-background-color: #262626;	
+} 
+
+
+#playButton{
+	-fx-background-image: url("Assets/Buttons/play%20button.png");
+	-fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-size: cover;
+	
+}
+
+#playButton:hover{
+
+	-fx-background-image: url("Assets/Buttons/play%20button%20hover.png");
+	-fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-size: cover;
+	
+}
+
+#playButton:active{
+
+	-fx-background-image: url("Assets/Buttons/play%20button%click.png");
+	-fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-size: cover;
+	
+}
+
+
+
+#quitButton{
+	-fx-background-image: url("Assets/Buttons/quit%20button.png");
+	-fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-size: cover;
+
+}
+
+#quitButton:hover{
+
+	-fx-background-image: url("Assets/Buttons/quit%20button%20hover.png");
+	-fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-size: cover;
+}
+
+#quitButton:active{
+
+	-fx-background-image: url("Assets/Buttons/quit%20button%click.png");
+	-fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-size: cover;
+}
+
+
+
