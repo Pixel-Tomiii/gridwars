@@ -7,6 +7,7 @@ import gridwars.timers.UpgradeBar;
 import javafx.application.*;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyCode;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.*;
 import javafx.scene.*;
@@ -55,6 +56,7 @@ public class GridWars {
 
     // Groups;
     public Group auras = new Group();
+    public static Group overlays = new Group();
     public Group nodes = new Group();
     public Group tiles = new Group();
     public Group builderNodes = new Group();
@@ -134,6 +136,7 @@ public class GridWars {
     public void renderMap() {
         display = new Pane();
         render(tiles);
+        render(overlays);
 
         for (Group layer:buildingNodes) {
             render(layer);
@@ -141,6 +144,7 @@ public class GridWars {
 
         render(builderNodes);
         render(textNodes);
+
 
         scene.setRoot(display);
     }
@@ -260,6 +264,8 @@ public class GridWars {
 
                                 player1.image.setImage(new Image("gridwars/resources/assets/Player1.png"));
                                 setupImage(player1.image, player1.x, player1.y - 1);
+                                player1.originalY = (float) player1.image.getLayoutY();
+                                player1.originalX = (float) player1.image.getLayoutX();
 
                                 builderNodes.getChildren().add(player1.image);
                             }
@@ -274,6 +280,8 @@ public class GridWars {
 
                                 player2.image.setImage(new Image("gridwars/resources/assets/Player2.png"));
                                 setupImage(player2.image, player2.x, player2.y - 1);
+                                player2.originalY = (float) player2.image.getLayoutY();
+                                player2.originalX = (float) player2.image.getLayoutX();
 
                                 builderNodes.getChildren().add(player2.image);
                             }
@@ -425,41 +433,25 @@ public class GridWars {
                 // Player 1's Builder
                 switch (key.getCode()) {
                     case W:
-                        player1.up = true;
-                        break;
-
                     case S:
-                        player1.down = true;
-                        break;
-
                     case A:
-                        player1.left = true;
-                        break;
-
                     case D:
-                        player1.right = true;
+                        player1.previousDirection = player1.newDirection;
+                        player1.newDirection = key.getCode();
                         break;
                 }
 
                 // Player 2's Builder
                 switch (key.getCode()) {
-
                     case UP:
-                        player2.up = true;
-                        break;
-
                     case DOWN:
-                        player2.down = true;
-                        break;
-
                     case LEFT:
-                        player2.left = true;
-                        break;
-
                     case RIGHT:
-                        player2.right = true;
+                        player2.previousDirection = player2.newDirection;
+                        player2.newDirection = key.getCode();
                         break;
                 }
+
 
 
                 /* -----------------------------------------------------------------------------------------------------
@@ -575,19 +567,12 @@ public class GridWars {
                 switch (key.getCode()) {
 
                     case W:
-                        player1.up = false;
-                        break;
-
                     case S:
-                        player1.down = false;
-                        break;
-
                     case A:
-                        player1.left = false;
-                        break;
-
                     case D:
-                        player1.right = false;
+                        if (player1.newDirection == key.getCode()) {
+                            player1.newDirection = KeyCode.UNDEFINED;
+                        }
                         break;
                 }
 
@@ -595,19 +580,12 @@ public class GridWars {
                 switch (key.getCode()) {
 
                     case UP:
-                        player2.up = false;
-                        break;
-
                     case DOWN:
-                        player2.down = false;
-                        break;
-
                     case LEFT:
-                        player2.left = false;
-                        break;
-
                     case RIGHT:
-                        player2.right = false;
+                        if (player2.newDirection == key.getCode()) {
+                            player2.newDirection = KeyCode.UNDEFINED;
+                        }
                         break;
                 }
             }

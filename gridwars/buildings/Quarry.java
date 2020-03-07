@@ -42,7 +42,7 @@ public class Quarry extends Building {
 
     @Override
     public void activate() {
-        SpecialUpgrades.QUARRY(owner);
+        SpecialUpgrades.QUARRY(owner, this);
     }
 
     @Override

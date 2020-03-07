@@ -42,7 +42,7 @@ public class Factory extends Building {
 
     @Override
     public void activate() {
-        SpecialUpgrades.FACTORY(owner);
+        SpecialUpgrades.FACTORY(owner, this);
     }
 
     @Override

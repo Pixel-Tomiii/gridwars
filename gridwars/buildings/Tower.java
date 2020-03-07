@@ -26,7 +26,7 @@ public class Tower extends Building {
 
     @Override
     public void activate() {
-        SpecialUpgrades.TOWER(x, y);
+        SpecialUpgrades.TOWER(x, y, this);
     }
 
     @Override

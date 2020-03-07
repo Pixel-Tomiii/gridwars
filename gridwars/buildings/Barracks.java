@@ -32,7 +32,7 @@ public class Barracks extends Building {
 
     @Override
     public void activate() {
-        SpecialUpgrades.BARRACKS(owner);
+        SpecialUpgrades.BARRACKS(owner, this);
     }
 
     @Override

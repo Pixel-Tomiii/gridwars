@@ -69,19 +69,35 @@ public class Bunker extends Building {
     @Override
     public void activate() {
         if (GridWars.grid[y + 1][x] != null) {
-            adjacentBuildings.add(GridWars.grid[y + 1][x].building);
+            if (GridWars.grid[y + 1][x].building != null) {
+                if (!(GridWars.grid[y + 1][x].building instanceof Bunker)) {
+                    adjacentBuildings.add(GridWars.grid[y + 1][x].building);
+                }
+            }
         }
 
         if (GridWars.grid[y - 1][x] != null) {
-            adjacentBuildings.add(GridWars.grid[y - 1][x].building);
+            if (GridWars.grid[y - 1][x].building != null) {
+                if (!(GridWars.grid[y - 1][x].building instanceof Bunker)) {
+                    adjacentBuildings.add(GridWars.grid[y - 1][x].building);
+                }
+            }
+        }
+
+        if (GridWars.grid[y][x + 1] != null) {
+            if (GridWars.grid[y][x + 1].building != null) {
+                if (!(GridWars.grid[y][x + 1].building instanceof Bunker)) {
+                    adjacentBuildings.add(GridWars.grid[y][x + 1].building);
+                }
+            }
         }
 
         if (GridWars.grid[y][x - 1] != null) {
-            adjacentBuildings.add(GridWars.grid[y][x + 1].building);
-        }
-
-        if (GridWars.grid[y][x - 1] != null) {
-            adjacentBuildings.add(GridWars.grid[y][x - 1].building);
+            if (GridWars.grid[y][x - 1].building != null) {
+                if (!(GridWars.grid[y][x - 1].building instanceof Bunker)) {
+                    adjacentBuildings.add(GridWars.grid[y][x - 1].building);
+                }
+            }
         }
 
         SpecialUpgrades.BUNKER(this);

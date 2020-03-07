@@ -48,7 +48,7 @@ public class ResearchLab extends Building {
 
     @Override
     public void activate() {
-        SpecialUpgrades.RESEARCH_LAB(owner);
+        SpecialUpgrades.RESEARCH_LAB(owner, this);
     }
 
     @Override

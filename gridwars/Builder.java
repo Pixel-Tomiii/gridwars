@@ -5,6 +5,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.input.KeyCode;
 
 /* ---------------------------------------------------------------------------------------------------------------------
 The builder class handles everything builder related. This mostly includes movement but it also includes the image
@@ -14,16 +15,16 @@ public class Builder {
 
 	// Movement.
 	public AnimationTimer movement;
-	private long speedInterval = 16666667; // The interval at which the player moves.
+	public float framesPerMove = 20; // The interval at which the player moves.
+	int frameCount = 0;
 
-	public int acceleration = 4; // How fast the player will accelerate.
-	public int maxVel = acceleration * 2;
 	private long lastMove = 0; // The last time the player moved.
 	public boolean isMoving = false; // Determines if the player is moving or not.
 
-	private int baseXVel = GridWars.tileWidth / 16; // Pixels to move in the x direction.
-	private int baseYVel = GridWars.tileHeigh / 16; // Pixels to move in the y direction.
-
+	public float originalX = 0;
+	private float newX = 0;
+	public float originalY = 0;
+	private float newY = 0;
 
 	public long BUILD_INTERVAL = 1200000000;
 	public long UPGRADE_INTERVAL = 800000000;
@@ -39,6 +40,10 @@ public class Builder {
  	public boolean left = false;
  	public boolean right = false;
 
+	public KeyCode previousDirection = KeyCode.UNDEFINED;
+ 	public KeyCode newDirection = KeyCode.UNDEFINED;
+
+
  	// Income.
 	public AnimationTimer income;
  	private long incomeInterval = 500000000; // The interval at which the player gets money.
@@ -50,7 +55,7 @@ public class Builder {
 
  	// Building.
 	public AnimationTimer build;
- 	public float buildSpeedMultiplier = 0.1f; // Increases the speed at which the player builds.
+ 	public float buildSpeedMultiplier = 0; // Increases the speed at which the player builds.
  	public boolean isBuilding = false; // Determins if the builder is building or not.
 	public int buildingLevelCap = 5; // Determines how many times a building can be upgraded.
 
@@ -81,23 +86,140 @@ public class Builder {
 
   			@Override
 			public void handle(long now) {
-
   				if (!isBuilding) {
-  					if (now > lastMove + speedInterval) {
-						if (isMoving) {
-							if (left || right) {
-								if (GridWars.grid[y][x].image.getLayoutX() + )
-							}
+
+  					if (!isMoving) {
+						checkForCollision();
+					}
+
+  					else {
+  						frameCount++;
+  						if (frameCount <= framesPerMove) {
+							accelerate();
+							translate();
 						}
 
-						else {
-							willCollide();
+  						else {
+							isMoving = false;
+
+							newX = 0;
+							newY = 0;
+
+							originalX = (float) image.getLayoutX();
+							originalY = (float) image.getLayoutY();
+
+  							frameCount = 0;
 						}
 					}
 				}
 			}
 		};
 	}
+
+	public void accelerate() {
+		float newVel = (float) ((-2 * Math.pow(frameCount / framesPerMove, 3)) + (3 * Math.pow(frameCount / framesPerMove, 2)));
+		setVelocity(newVel);
+	}
+
+	public void setVelocity(float newVel) {
+
+		if (up) {
+			newY = GridWars.tileHeight * -newVel;
+
+		} else if (down) {
+			newY = GridWars.tileHeight * newVel;
+
+		} else if (left) {
+			newX = GridWars.tileWidth * -newVel;
+
+		} else if (right) {
+			newX =  GridWars.tileWidth * newVel;
+		}
+	}
+
+
+	public void checkForCollision() {
+
+		if (newDirection != KeyCode.UNDEFINED) {
+			switch (newDirection) {
+				case W:
+				case UP:
+					up = true;
+					down = false;
+					left = false;
+					right = false;
+					break;
+
+				case S:
+				case DOWN:
+					up = false;
+					down = true;
+					left = false;
+					right = false;
+					break;
+
+				case A:
+				case LEFT:
+					up = false;
+					down = false;
+					left = true;
+					right = false;
+					break;
+
+				case D:
+				case RIGHT:
+					up = false;
+					down = false;
+					left = false;
+					right = true;
+					break;
+			}
+
+			if (up) {
+				if (!willCollide(x, y - 1)) {
+					y--;
+				}
+
+			} else if (down) {
+				if (!willCollide(x, y + 1)) {
+					y++;
+				}
+
+			} else if (left) {
+				if (!willCollide(x - 1, y)) {
+					x--;
+				}
+
+			} else if (right) {
+				if (!willCollide(x + 1, y)) {
+					x++;
+				}
+
+			}
+
+		} else {
+			up = false;
+			down = false;
+			left = false;
+			right = false;
+			isMoving = false;
+		}
+	}
+
+	public boolean willCollide(int x, int y) {
+		if (GridWars.grid[y][x] == null) {
+			return true;
+		}
+
+		isMoving = true;
+		return false;
+	}
+
+	public void translate() {
+		image.setLayoutX(originalX + newX);
+		image.setLayoutY(originalY + newY);
+	}
+
 
 
 
@@ -123,49 +245,5 @@ public class Builder {
 				}
 			}
 		};
-	}
-
-
-
-	/* -----------------------------------------------------------------------------------------------------------------
-	Checks to make sure the player can move in the direction they want to.
-	----------------------------------------------------------------------------------------------------------------- */
-	private boolean willCollide() {
-		if (!isMoving) {
-			if (up && y - 1 >= 0) {
-				if (GridWars.grid[y - 1][x] != null) {
-					y -= 1;
-					isMoving = true;
-					return false;
-				}
-
-			} else if (down && y + 1 < GridWars.GRID_HEIGHT) {
-				if (GridWars.grid[y + 1][x] != null) {
-					y += 1;
-					isMoving = true;
-					return false;
-				}
-
-			} else if (left && x - 1 >= 0) {
-				if (GridWars.grid[y][x - 1] != null) {
-					x -= 1;
-					isMoving = true;
-					return false;
-				}
-
-			} else if (right && x + 1 < GridWars.GRID_WIDTH) {
-				if (GridWars.grid[y][x + 1] != null) {
-					x += 1;
-					return false;
-				}
-			}
-		}
-		return true;
-	}
-
-
-
-	public void translate() {
-
 	}
 }

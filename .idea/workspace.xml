@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98936933-dd1e-432a-9ea8-50150c15db15" name="Default Changelist" comment="" />
+    <list default="true" id="98936933-dd1e-432a-9ea8-50150c15db15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/Builder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/Builder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/Builder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/Builder$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/GridWars$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/GridWars$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/GridWars$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/GridWars$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/GridWars$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/GridWars$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/GridWars.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/GridWars.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/Barracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/Barracks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/Bunker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/Bunker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/MicrobotsLab.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/MicrobotsLab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/Quarry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/Quarry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/ResearchLab.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/ResearchLab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/SpecialUpgrades.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/SpecialUpgrades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/buildings/Tower.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/buildings/Tower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/bunker lvl 5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/factory lvl 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/factory lvl 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/factory lvl 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/factory lvl 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/quarry lvl 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/quarry lvl 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/quarry lvl 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/quarry lvl 4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/quarry lvl 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/gridwars/resources/assets/Buildings/quarry lvl 5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/GridWars.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/GridWars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/Barracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/Barracks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/Bunker.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/Bunker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/MicrobotsLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/MicrobotsLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/Quarry.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/Quarry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/ResearchLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/ResearchLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/SpecialUpgrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/SpecialUpgrades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/buildings/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/buildings/Tower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/bunker lvl 5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/factory lvl 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/factory lvl 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/factory lvl 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/factory lvl 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/quarry lvl 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/quarry lvl 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/quarry lvl 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/quarry lvl 4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/quarry lvl 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/gridwars/resources/assets/Buildings/quarry lvl 5.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YjOVFp8pkdwH3uX4Jpu3m49iuW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -48,6 +101,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1583453791012" />
+    <state x="435" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583536064519">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="435" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1583536064519" />
     <state x="609" y="308" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583503618133">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -56,6 +113,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="74" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1536.834@0.0.1536.834" timestamp="1583452581526" />
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1583530312602">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1583530312602" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1583526537571">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

@@ -56,7 +56,7 @@ public class MicrobotsLab extends Building {
 
     @Override
     public void activate() {
-        SpecialUpgrades.MICROBOTS_LAB();
+        SpecialUpgrades.MICROBOTS_LAB(this);
     }
 
     @Override
